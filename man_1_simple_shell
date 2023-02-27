@@ -1,32 +1,43 @@
-.TH man Simple Shell "23 of February of 2023" "version 1.0"
+.TH man 1 "16 Nov 2022" "0.1" "simple_shell man page"
 
 .SH NAME
-.B Simple Shell (hsh)
- - command interpreter (shell)
+.B simple_shell
+- Simple shell create in C to interact with a linux operating system.
 
 .SH SYNOPSIS
-.PP
-. ./hsh
+ hsh [options] [file]
 
-.PP
-.B
 .SH DESCRIPTION
-The Simple Shell is a command line interpreter that reads lines from the terminan \
-, and executes them.
-Simple shell works both in interactive mode and non interactive mode.
-.PP
-.SH EXAMPLE:
-$ ./hsh
-echo "/bin/ls" | ./hsh
+Shell is a UNIX term for the interactive user interface with an operating system. The shell is the layer of programming that understands
+and executes the commands a user enters. In some systems, the shell is called a command interpreter. A shell usually implies an interface
+with a command syntax 
 
-.PP
-.B Simple Shell has two built in commands: \
+.B Overview
 
-.PP
- exit - To logout of the shell.
+The simple shell is a command that reads lines from either a file or the terminal, interprets them, and generally executes other commands. It is the program that is started when a user logs into the system. It incorporates many features to aid interactive use and has the advantage that the interpretative language is common to both interactive and non-interactive use (shell scripts). That is, commands can be typed directly to the running simple shell or can be put into a file, which can be executed directly by the simple shell.
+.SH Return Value
 
-.PP
-env - Displays all the environment variables with their values.
+Always 0 for success, other number means failure.
 
-.SH AUTHORS
-.B Miguel de Oliveira and Olimpio Adolfo
+.SH PATH
+
+It will look inside al directions in PATH env variable for executable.
+
+.SH
+
+.SH OPTIONS
+.B simple_shell
+Command options will be typed after the main command followed by a space and a
+ '-' symbol.
+
+.SH EXAMPLE
+
+[command] [options]
+$ ls -l
+
+.SH BUGS
+Single space required after argument.
+
+
+.SH AUTHOR
+Godswill Kalu, Vatalis Ibeh.
